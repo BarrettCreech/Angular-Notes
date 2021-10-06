@@ -1,0 +1,13 @@
+<div class="main-container">
+
+
+    <div class="notes-index">
+        <app-note-card1 
+        *ngFor="let note of notes; index as i" 
+        [link] = "i"
+        [title]="note.title" 
+        [body]="note.body" ></app-note-card1>        
+    </div>
+
+    <button class="button floating-add-button is-primary" [disabled]="addButton" routerLink="new">+ Add</button>
+</div>
